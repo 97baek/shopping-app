@@ -1,0 +1,147 @@
+li {
+  list-style: none;
+}
+
+.App {
+  text-align: center;
+}
+
+.products-container {
+  margin-left: 8px;
+  margin-top: 12px;
+}
+
+.products {
+  display: flex;
+  padding-left: 0;
+}
+
+.products .product {
+  position: relative;
+  width: 250px;
+  margin-right: 8px;
+  font-size: 0.875em;
+}
+
+.products .product img {
+  width: 100%;
+  border: 1px solid gray;
+}
+
+.products .product .add-to-cart {
+  position: absolute;
+  top: 220px;
+  left: 210px;
+}
+
+.products .product .product-name {
+}
+
+.products .product .price span {
+  font-weight: 600;
+}
+
+.cart-list {
+  width: 70%;
+  padding-left: 0;
+}
+
+.cart-header {
+  display: flex;
+  border-top: 3px solid black;
+  border-bottom: 1px solid gray;
+  margin: 8px 0;
+}
+
+.cart-header .product-info {
+  flex: 1 1 50%;
+  text-align: center;
+}
+
+.cart-header .quantity {
+  flex: 1 1 25%;
+  text-align: center;
+}
+
+.cart-header .price {
+  flex: 1 1 25%;
+  text-align: center;
+}
+
+.cart-product {
+  display: flex;
+  border-bottom: 1px solid gray;
+  padding: 8px 8px;
+}
+
+.cart-product .info-container {
+  flex: 1 1 50%;
+  display: flex;
+}
+
+.cart-product .info-container .product-image {
+  width: 100px;
+  border: 1px solid gray;
+}
+
+.cart-product .product-name {
+  display: flex;
+  align-items: center;
+}
+
+.cart-product .quntity-container {
+  flex: 1 1 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-product .quntity-container .quant {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.plus-btn img,
+.minus-btn img {
+  width: 100%;
+}
+
+.cart-product .price-container {
+  flex: 1 1 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
