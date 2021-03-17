@@ -5,7 +5,7 @@
       "productName": "실버 알루미늄 케이스, 그리고 Nike 스포츠 루프",
       "price": "10,000",
       "image": "/AppleWatch/watch_1.png",
-      "quantity": 0,
+      "quantity": 2,
       "isCart": false
     },
     {
@@ -38,6 +38,16 @@
       "price": "7,000",
       "image": "/AppleWatch/watch_5.png",
       "quantity": 0,
+      "isCart": false
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "productName": "실버 알루미늄 케이스, 그리고 Nike 스포츠 루프",
+      "price": "10,000",
+      "image": "/AppleWatch/watch_1.png",
+      "quantity": 2,
       "isCart": false
     }
   ]

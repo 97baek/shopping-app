@@ -2,6 +2,11 @@ li {
   list-style: none;
 }
 
+button {
+  background-color: #fff;
+  border: none;
+}
+
 .App {
   text-align: center;
 }
@@ -30,8 +35,9 @@ li {
 
 .products .product .add-to-cart {
   position: absolute;
-  top: 220px;
-  left: 210px;
+  top: 63%;
+  right: 0%;
+  background: #ccc;
 }
 
 .products .product .product-name {
@@ -41,8 +47,17 @@ li {
   font-weight: 600;
 }
 
+.cart-and-payment {
+  display: flex;
+  width: 100%;
+}
+
+.cart-container {
+  width: 60%;
+}
+
 .cart-list {
-  width: 70%;
+  width: 100%;
   padding-left: 0;
 }
 
@@ -96,17 +111,31 @@ li {
   align-items: center;
 }
 
+.quantity-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
 .cart-product .quntity-container .quant {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 30px;
   height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.plus-btn,
+.minus-btn {
+  cursor: pointer;
 }
 
 .plus-btn img,
 .minus-btn img {
-  width: 100%;
+  width: 90%;
 }
 
 .cart-product .price-container {
@@ -114,6 +143,13 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.payment-container {
+  width: 35%;
+  margin-top: 64px;
+  margin-left: 16px;
+  background: #fff000;
 }
 
 @media (prefers-reduced-motion: no-preference) {
