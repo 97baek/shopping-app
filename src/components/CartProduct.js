@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 
-function CartProduct({ cartProduct, quantity, cart }) {
-  console.log(cartProduct.image);
-  console.log(cartProduct);
-
+function CartProduct({ cartProduct, quantity, onClickDelete }) {
   const [productQuantity, setProductQuantity] = useState(quantity);
   const onClickPlus = () => {
     setProductQuantity(productQuantity + 1);
   };
+
   const onClickMinus = () => {
     setProductQuantity(productQuantity - 1);
     if (productQuantity < 1) {
@@ -24,7 +22,7 @@ function CartProduct({ cartProduct, quantity, cart }) {
       </div>
       <div className="quntity-container">
         <div className="quantity-buttons">
-          <button onClick={() => onClickPlus()} className="quant btn plus-btn">
+          <button onClick={onClickPlus} className="quant btn plus-btn">
             <img src="./AppleWatch/btn_plus.png" alt="" />
           </button>
           <p className="quant">{productQuantity}</p>
@@ -33,7 +31,10 @@ function CartProduct({ cartProduct, quantity, cart }) {
           </button>
         </div>
       </div>
-      <div className="price-container">{cartProduct.price}원</div>
+      <div className="price-container">{cartProduct.price * productQuantity}원</div>
+      <button onClick={() => onClickDelete(cartProduct.id)} className="delBtn">
+        <img src="./AppleWatch/btn_delect.png" alt="" />
+      </button>
     </li>
   );
 }

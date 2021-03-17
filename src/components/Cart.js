@@ -1,10 +1,17 @@
 import React, { useState } from "react";
-import dummy from "../DB/data.json";
 import Payment from "./Payment";
 import CartProduct from "./CartProduct";
-function Cart({ productList, cart }) {
-  const quantity = dummy.products.map((product) => product.quantity);
+function Cart({ cart }) {
+  console.log("렌더림됨");
+  const [quantity] = cart.map((product) => product.quantity);
   console.log(quantity);
+
+  const onClickDelete = (id) => {
+    cart.filter((product) => product.id !== id);
+    console.log(id);
+    console.log(cart);
+  };
+
   return (
     <div className="cart-and-payment">
       <div className="cart-container">
@@ -16,7 +23,12 @@ function Cart({ productList, cart }) {
             <p className="price">가격</p>
           </li>
           {cart.map((product) => (
-            <CartProduct cartProduct={product} quantity={product.quantity} key={product.id} />
+            <CartProduct
+              cartProduct={product}
+              onClickDelete={onClickDelete}
+              quantity={product.quantity}
+              key={product.id}
+            />
           ))}
         </ul>
       </div>

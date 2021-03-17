@@ -3,7 +3,7 @@
     {
       "id": 1,
       "productName": "실버 알루미늄 케이스, 그리고 Nike 스포츠 루프",
-      "price": "10,000",
+      "price": 10000,
       "image": "/AppleWatch/watch_1.png",
       "quantity": 2,
       "isCart": false
@@ -11,7 +11,7 @@
     {
       "id": 2,
       "productName": "실버 알루미늄 케이스, 그리고 Nike 스포츠 밴드",
-      "price": "10,000",
+      "price": 10000,
       "image": "/AppleWatch/watch_2.png",
       "quantity": 0,
       "isCart": false
@@ -19,7 +19,7 @@
     {
       "id": 3,
       "productName": "실버 스테인리스 스틸 케이스, 그리고 모던 버클",
-      "price": "8,500",
+      "price": 8500,
       "image": "/AppleWatch/watch_3.png",
       "quantity": 0,
       "isCart": false
@@ -27,7 +27,7 @@
     {
       "id": 4,
       "productName": "골드 알루미늄 케이스, 그리고 브레이드 솔로 루프",
-      "price": "5,000",
+      "price": 5000,
       "image": "/AppleWatch/watch_4.png",
       "quantity": 0,
       "isCart": false
@@ -35,7 +35,7 @@
     {
       "id": 5,
       "productName": "스페이스 그레이 알루미늄 케이스, 그리고 스포츠 밴드",
-      "price": "7,000",
+      "price": 7000,
       "image": "/AppleWatch/watch_5.png",
       "quantity": 0,
       "isCart": false
@@ -45,7 +45,7 @@
     {
       "id": 1,
       "productName": "실버 알루미늄 케이스, 그리고 Nike 스포츠 루프",
-      "price": "10,000",
+      "price": 10000,
       "image": "/AppleWatch/watch_1.png",
       "quantity": 2,
       "isCart": false
