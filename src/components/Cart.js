@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import Payment from "./Payment";
 import CartProduct from "./CartProduct";
-function Cart({ cart }) {
-  console.log("렌더림됨");
+function Cart({ cart, onClickDelete }) {
+  console.log("렌더링됨");
   const [quantity] = cart.map((product) => product.quantity);
+  console.log(cart);
   console.log(quantity);
-
-  const onClickDelete = (id) => {
-    cart.filter((product) => product.id !== id);
-    console.log(id);
-    console.log(cart);
-  };
 
   return (
     <div className="cart-and-payment">
@@ -32,7 +27,7 @@ function Cart({ cart }) {
           ))}
         </ul>
       </div>
-      <Payment />
+      <Payment cart={cart} />
     </div>
   );
 }

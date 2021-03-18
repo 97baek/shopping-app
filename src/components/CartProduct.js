@@ -8,9 +8,9 @@ function CartProduct({ cartProduct, quantity, onClickDelete }) {
 
   const onClickMinus = () => {
     setProductQuantity(productQuantity - 1);
-    if (productQuantity < 1) {
+    if (productQuantity <= 1) {
       alert("최소수량입니다!");
-      setProductQuantity(0);
+      setProductQuantity(1);
     }
   };
 

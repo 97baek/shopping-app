@@ -58,7 +58,11 @@ button {
 }
 
 .cart-container {
-  width: 60%;
+  width: 63%;
+}
+
+.cart-container h2 {
+  margin: 16px 0;
 }
 
 .cart-list {
@@ -171,9 +175,50 @@ button {
 
 .payment-container {
   width: 35%;
+  height: 100%;
   margin-top: 64px;
   margin-left: 16px;
-  background: #fff000;
+  border-top: 3px solid black;
+  background: #f1f3f5;
+}
+
+.pay-list {
+  display: flex;
+  padding: 1rem;
+  margin: 0 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+}
+
+.pay-list.product-price,
+.pay-list.shipment-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-bottom: none;
+}
+
+.total-price .price {
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.order-btn {
+  display: block;
+  background-color: red;
+  width: 70%;
+  height: 4rem;
+  color: white;
+  margin: 0 auto 1rem auto;
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -5,6 +5,7 @@ import Cart from "./Cart";
 function Products() {
   const productList = dummy.products;
   const [cartList, setCartList] = useState(dummy.cart);
+
   const addToCart = (id) => {
     const [addedProduct] = productList.filter((product) => product.id === id);
     for (let i = 0; i < cartList.length; i++) {
@@ -14,6 +15,12 @@ function Products() {
     }
     console.log(cartList);
     setCartList([...cartList, addedProduct]);
+  };
+
+  const onClickDelete = (id) => {
+    console.log("필터 전", cartList);
+    setCartList(cartList.filter((product) => product.id !== id));
+    console.log(cartList);
   };
   return (
     <>
@@ -25,7 +32,7 @@ function Products() {
           ))}
         </ul>
       </div>
-      <Cart productList={productList} cart={cartList} />
+      <Cart productList={productList} cart={cartList} onClickDelete={onClickDelete} />
     </>
   );
 }
