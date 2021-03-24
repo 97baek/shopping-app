@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Payment from "./Payment";
 import CartProduct from "./CartProduct";
-function Cart({ cart, onClickDelete, productPrice, productQuantity, onClickPlus, onClickMinus }) {
-  console.log(productQuantity);
-
+function Cart({ cart, onClickDelete, onIncrease, onDecrease }) {
+  console.log("cart: ", cart);
   return (
     <div className="cart-and-payment">
       <div className="cart-container">
@@ -18,15 +17,15 @@ function Cart({ cart, onClickDelete, productPrice, productQuantity, onClickPlus,
             <CartProduct
               cartProduct={product}
               onClickDelete={onClickDelete}
-              productQuantity={productQuantity}
-              onClickPlus={onClickPlus}
-              onClickMinus={onClickMinus}
+              productQuantity={product.quantity}
+              onIncrease={onIncrease}
+              onDecrease={onDecrease}
               key={product.id}
             />
           ))}
         </ul>
       </div>
-      <Payment cart={cart} productPrice={productPrice} />
+      <Payment cart={cart} />
     </div>
   );
 }
