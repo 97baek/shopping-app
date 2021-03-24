@@ -1,19 +1,7 @@
 import React, { useState } from "react";
 
-function CartProduct({ cartProduct, quantity, onClickDelete }) {
-  const [productQuantity, setProductQuantity] = useState(quantity);
-  const onClickPlus = () => {
-    setProductQuantity(productQuantity + 1);
-  };
-
-  const onClickMinus = () => {
-    setProductQuantity(productQuantity - 1);
-    if (productQuantity <= 1) {
-      alert("최소수량입니다!");
-      setProductQuantity(1);
-    }
-  };
-
+function CartProduct({ cartProduct, productQuantity, onClickDelete, onClickPlus, onClickMinus }) {
+  console.log(cartProduct.id);
   return (
     <li className="cart-product">
       <div className="info-container">
@@ -22,11 +10,11 @@ function CartProduct({ cartProduct, quantity, onClickDelete }) {
       </div>
       <div className="quntity-container">
         <div className="quantity-buttons">
-          <button onClick={onClickPlus} className="quant btn plus-btn">
+          <button onClick={() => onClickPlus(cartProduct.id)} className="quant btn plus-btn">
             <img src="./AppleWatch/btn_plus.png" alt="" />
           </button>
           <p className="quant">{productQuantity}</p>
-          <button onClick={onClickMinus} className="quant btn minus-btn">
+          <button onClick={() => onClickMinus(cartProduct.id)} className="quant btn minus-btn">
             <img src="./AppleWatch/btn_min.png" alt="" />
           </button>
         </div>

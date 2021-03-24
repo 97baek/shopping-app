@@ -1,15 +1,14 @@
 import React from "react";
 
-function Payment({ cart }) {
-  console.log(cart);
+function Payment({ cart, productPrice }) {
   return (
     <form className="payment-container">
       <div className="pay-list product-price">
-        <span class="pay-left">총 상품 금액</span>
-        <span className="pay-right">0원</span>
+        <span className="pay-left">총 상품 금액</span>
+        <span className="pay-right">{productPrice}원</span>
       </div>
       <div className="pay-list shipment-price">
-        <span class="pay-left">총 배송비</span>
+        <span className="pay-left">총 배송비</span>
         <span className="pay-right">2,500원</span>
       </div>
       <div className="pay-list total-price">

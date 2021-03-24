@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import Payment from "./Payment";
 import CartProduct from "./CartProduct";
-function Cart({ cart, onClickDelete }) {
-  console.log("렌더링됨");
-  const [quantity] = cart.map((product) => product.quantity);
-  console.log(cart);
-  console.log(quantity);
+function Cart({ cart, onClickDelete, productPrice, productQuantity, onClickPlus, onClickMinus }) {
+  console.log(productQuantity);
 
   return (
     <div className="cart-and-payment">
@@ -21,13 +18,15 @@ function Cart({ cart, onClickDelete }) {
             <CartProduct
               cartProduct={product}
               onClickDelete={onClickDelete}
-              quantity={product.quantity}
+              productQuantity={productQuantity}
+              onClickPlus={onClickPlus}
+              onClickMinus={onClickMinus}
               key={product.id}
             />
           ))}
         </ul>
       </div>
-      <Payment cart={cart} />
+      <Payment cart={cart} productPrice={productPrice} />
     </div>
   );
 }
